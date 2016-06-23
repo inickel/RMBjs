@@ -26,7 +26,7 @@ $(function(){
 		render:()=>{
 			return <div className="index">
 				<div className="index-top" style={{"backgroundImage":"url(../images/index1.jpg)","backgroundRepeat":'no-repeat'}}>
-					<div className="index-title"><span className="warning">MY</span>UI</div>
+					<div className="index-title"><span className="warning">RMB</span>js</div>
 					<div>一个针对移动端的前端框架</div>
 					<div className="index-des">
 						前端TNT小组出品
@@ -77,7 +77,7 @@ $(function(){
 	    return (
 	    <div className="main">
 		    <div className="banner">
-		    	<div className="logo"><span className="warning">MY</span>UI</div>
+		    	<div className="logo"><span className="warning">RMB</span>js</div>
 		    	<div id="mainmenu">
 			      	<Menu onClick={this.handleClick}
 			        style={{ width: 240 }}
