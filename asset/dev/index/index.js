@@ -99,9 +99,9 @@
 							_react2.default.createElement(
 								'span',
 								{ className: 'warning' },
-								'MY'
+								'RMB'
 							),
-							'UI'
+							'js'
 						),
 						_react2.default.createElement(
 							'div',
@@ -261,9 +261,9 @@
 							_react2.default.createElement(
 								'span',
 								{ className: 'warning' },
-								'MY'
+								'RMB'
 							),
-							'UI'
+							'js'
 						),
 						_react2.default.createElement(
 							'div',
