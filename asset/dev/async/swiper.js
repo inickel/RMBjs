@@ -4993,7 +4993,7 @@
 	                        _react2.default.createElement(
 	                            'code',
 	                            null,
-	                            _react2.default.createElement('div', { className: 'highlight-code', dangerouslySetInnerHTML: { __html: sourceCode } })
+	                            sourceCode
 	                        )
 	                    )
 	                ),

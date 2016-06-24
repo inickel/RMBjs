@@ -48,7 +48,7 @@ var DemoShow = React.createClass({
                     <div className="source-code-panel">
                         <pre>
                           <code>
-                            <div className="highlight-code" dangerouslySetInnerHTML={{__html:sourceCode}}/>
+                              {sourceCode}
                           </code>
                         </pre>
                     </div>
