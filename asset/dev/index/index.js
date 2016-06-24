@@ -61,7 +61,7 @@
 	window.ReactDOM = __webpack_require__(42);
 
 	window.ANT = {
-		Menu: _antd.Menu, Icon: _antd.Icon, Button: _antd.Button, Row: _antd.Row, Col: _antd.Col, Spin: _antd.Spin
+	    Menu: _antd.Menu, Icon: _antd.Icon, Button: _antd.Button, Row: _antd.Row, Col: _antd.Col, Spin: _antd.Spin, Table: _antd.Table
 	};
 	var SubMenu = _antd.Menu.SubMenu;
 	var MenuItemGroup = _antd.Menu.ItemGroup;
@@ -75,389 +75,392 @@
 	window.DemoShow = __webpack_require__(250);
 
 	$(function () {
-		E.closeLoading();
-		var Index = React.createClass({
-			displayName: 'Index',
+	    E.closeLoading();
+	    var Index = React.createClass({
+	        displayName: 'Index',
 
-			render: function render() {
-				return React.createElement(
-					'div',
-					{ className: 'index' },
-					React.createElement(
-						'div',
-						{ className: 'index-top' },
-						React.createElement(
-							'div',
-							{ className: 'index-title' },
-							React.createElement(
-								'span',
-								{ className: 'warning' },
-								'RMB'
-							),
-							'js'
-						),
-						React.createElement(
-							'div',
-							null,
-							'一个针对移动端的前端框架'
-						),
-						React.createElement(
-							'div',
-							{ className: 'index-des' },
-							'前端TNT小组出品'
-						),
-						React.createElement(
-							'div',
-							{ className: 'index-github' },
-							React.createElement(
-								'a',
-								{ href: 'https://github.com/TNT-F2E/RMBjs', target: '_blank' },
-								React.createElement(_antd.Icon, { type: 'github' }),
-								'  Github'
-							)
-						),
-						React.createElement(
-							'div',
-							null,
-							React.createElement(
-								'div',
-								{ className: 'index-start' },
-								'Let\'s start!'
-							)
-						)
-					),
-					React.createElement(
-						'div',
-						{ className: 'index-list' },
-						React.createElement(
-							_antd.Row,
-							null,
-							React.createElement(
-								_antd.Col,
-								{ span: '6' },
-								React.createElement(
-									'div',
-									{ className: 'index-list-item' },
-									React.createElement(
-										'div',
-										{ className: 'index-list-img' },
-										React.createElement('img', { src: '../images/mbile.jpeg' })
-									),
-									React.createElement(
-										'div',
-										{ className: 'index-list-title' },
-										'针对移动端'
-									),
-									React.createElement(
-										'div',
-										{ className: 'index-list-des' },
-										'针对移动web的前端框架，代码更适宜于移动端，充分考虑移动端性能、兼容问题、hybird开发模式等'
-									)
-								)
-							),
-							React.createElement(
-								_antd.Col,
-								{ span: '6' },
-								React.createElement(
-									'div',
-									{ className: 'index-list-item' },
-									React.createElement(
-										'div',
-										{ className: 'index-list-img' },
-										React.createElement('img', { src: '../images/components.png' })
-									),
-									React.createElement(
-										'div',
-										{ className: 'index-list-title' },
-										'丰富的组件'
-									),
-									React.createElement(
-										'div',
-										{ className: 'index-list-des' },
-										'丰富的移动ui组件,基于h5,css3,并根据css3能力做好js动画兼容,完美兼容各种移动机型'
-									)
-								)
-							),
-							React.createElement(
-								_antd.Col,
-								{ span: '6' },
-								React.createElement(
-									'div',
-									{ className: 'index-list-item' },
-									React.createElement(
-										'div',
-										{ className: 'index-list-img' },
-										React.createElement('img', { src: '../images/performance1.png' })
-									),
-									React.createElement(
-										'div',
-										{ className: 'index-list-title' },
-										'高性能 更智能'
-									),
-									React.createElement(
-										'div',
-										{ className: 'index-list-des' },
-										'努力让体验接近原生效果,并从多方位提升页面性能,引入search管理页面功能,实现智能化（切换hybird和web模式等）'
-									)
-								)
-							),
-							React.createElement(
-								_antd.Col,
-								{ span: '6' },
-								React.createElement(
-									'div',
-									{ className: 'index-list-item' },
-									React.createElement(
-										'div',
-										{ className: 'index-list-img' },
-										React.createElement('img', { src: '../images/react.png' })
-									),
-									React.createElement(
-										'div',
-										{ className: 'index-list-title' },
-										'基于React'
-									),
-									React.createElement(
-										'div',
-										{ className: 'index-list-des' },
-										'本框架基于React,且提供了基于webpack和gulp的脚手架工具,引入hotloader,htmlone等,使创建、开发、上线更简单'
-									)
-								)
-							)
-						)
-					)
-				);
-			}
-		});
-		var Sider = React.createClass({
-			displayName: 'Sider',
-			getInitialState: function getInitialState() {
-				return {
-					defaultOpenKeys: []
-				};
-			},
-			handleClick: function handleClick(e) {
-				this.setState({
-					current: e.key
-				});
-			},
-			render: function render() {
-				return React.createElement(
-					'div',
-					{ className: 'main' },
-					React.createElement(
-						'div',
-						{ className: 'banner' },
-						React.createElement(
-							'div',
-							{ className: 'logo' },
-							React.createElement(
-								'span',
-								{ className: 'warning' },
-								'RMB'
-							),
-							'js'
-						),
-						React.createElement(
-							'div',
-							{ id: 'mainmenu' },
-							React.createElement(
-								_antd.Menu,
-								_defineProperty({ onClick: this.handleClick,
-									style: { width: 240 },
-									defaultOpenKeys: this.state.defaultOpenKeys,
-									selectedKeys: [this.state.current],
-									mode: 'horizontal'
-								}, 'style', { width: "", WebkitBoxFlex: 1, border: 0 }),
-								React.createElement(
-									_antd.Menu.Item,
-									{ key: 'index' },
-									React.createElement(
-										_reactRouter.Link,
-										{ to: '/index' },
-										React.createElement(_antd.Icon, { type: 'home' }),
-										React.createElement(
-											'span',
-											null,
-											'首页'
-										)
-									)
-								),
-								React.createElement(
-									_antd.Menu.Item,
-									{ key: 'build' },
-									React.createElement(
-										_reactRouter.Link,
-										{ to: '/build' },
-										React.createElement(_antd.Icon, { type: 'caret-circle-o-right' }),
-										React.createElement(
-											'span',
-											null,
-											'构建工具'
-										)
-									)
-								),
-								React.createElement(
-									_antd.Menu.Item,
-									{ key: 'wapcomponents' },
-									React.createElement(
-										_reactRouter.Link,
-										{ to: '/wapcomponents' },
-										React.createElement(_antd.Icon, { type: 'appstore-o' }),
-										React.createElement(
-											'span',
-											null,
-											'移动web组件'
-										)
-									)
-								)
-							)
-						)
-					),
-					React.createElement(
-						'div',
-						{ className: 'body' },
-						this.props.body
-					),
-					React.createElement(
-						'div',
-						{ className: 'footer' },
-						React.createElement(
-							'div',
-							null,
-							'我们是虚拟世界的建筑师'
-						),
-						React.createElement(
-							'div',
-							{ className: 'issues' },
-							'问题与建议:',
-							React.createElement(
-								'a',
-								{ href: 'https://github.com/TNT-F2E/RMBjs/issues', target: '_blank' },
-								' ',
-								React.createElement(_antd.Icon, { type: 'github' }),
-								' Issues'
-							)
-						),
-						React.createElement(
-							'div',
-							{ className: 'aboutus' },
-							'联系我们: ',
-							React.createElement(_antd.Icon, { type: 'mail' }),
-							' 176929463@qq.com'
-						),
-						React.createElement(
-							'div',
-							{ className: 'andps' },
-							'最终解释权归本团队成员所有'
-						)
-					)
-				);
-			}
-		});
-		var Treemenu = React.createClass({
-			displayName: 'Treemenu',
-			getInitialState: function getInitialState() {
-				return {
-					defaultOpenKeys: ["wapcomponents"]
-				};
-			},
-			handleClick: function handleClick(e) {
-				this.setState({
-					current2: e.key
-				});
-			},
-			render: function render() {
-				return React.createElement(
-					'div',
-					{ className: 'componentsBody' },
-					React.createElement(
-						'div',
-						{ id: 'menutree' },
-						React.createElement(
-							_antd.Menu,
-							{ onClick: this.handleClick,
-								style: { width: 240 },
-								defaultOpenKeys: this.state.defaultOpenKeys,
-								selectedKeys: [this.state.current2],
-								mode: 'inline'
-							},
-							React.createElement(
-								_antd.Menu.Item,
-								{ key: 'guide' },
-								React.createElement(
-									_reactRouter.Link,
-									{ to: '/wapcomponents/guide' },
-									React.createElement(_antd.Icon, { type: 'question-circle-o' }),
-									React.createElement(
-										'span',
-										null,
-										'快速上手'
-									)
-								)
-							),
-							React.createElement(
-								SubMenu,
-								{ title: '移动web-Components', key: 'wapcomponents' },
-								React.createElement(
-									_antd.Menu.Item,
-									{ key: 'swiper' },
-									React.createElement(
-										_reactRouter.Link,
-										{ to: '/wapcomponents/swiper' },
-										'Swiper组件'
-									)
-								),
-								React.createElement(
-									_antd.Menu.Item,
-									{ key: 'toast' },
-									React.createElement(
-										_reactRouter.Link,
-										{ to: '/wapcomponents/toast' },
-										'Toast组件'
-									)
-								),
-								React.createElement(
-									_antd.Menu.Item,
-									{ key: 'alert' },
-									React.createElement(
-										_reactRouter.Link,
-										{ to: '/wapcomponents/alert' },
-										'Alert组件'
-									)
-								)
-							)
-						)
-					),
-					React.createElement(
-						'div',
-						{ className: 'componentsMain' },
-						this.props.cbody
-					)
-				);
-			}
-		});
-		ReactDOM.render(React.createElement(
-			_reactRouter.Router,
-			{ history: _reactRouter.hashHistory },
-			React.createElement(_reactRouter.Redirect, { from: '/', to: '/index' }),
-			React.createElement(_reactRouter.Redirect, { from: '/wapcomponents', to: '/wapcomponents/guide' }),
-			React.createElement(
-				_reactRouter.Route,
-				{ path: '/', component: Sider },
-				React.createElement(_reactRouter.Route, { path: 'index', components: { current: "index", body: Index } }),
-				React.createElement(_reactRouter.Route, { path: 'build', components: { current: "build", body: Build } }),
-				React.createElement(_reactRouter.Route, { path: 'frame', components: { current: "frame", body: Frame } }),
-				React.createElement(
-					_reactRouter.Route,
-					{ path: 'wapcomponents', components: { body: Treemenu, current: "wapcomponents" } },
-					React.createElement(_reactRouter.Route, { path: 'guide', components: { cbody: Guide, current2: "guide" } }),
-					React.createElement(_reactRouter.Route, { path: 'swiper', components: { cbody: Swiper, curren2: "swiper" } }),
-					React.createElement(_reactRouter.Route, { path: 'toast', components: { cbody: Toast, curren2: "toast" } }),
-					React.createElement(_reactRouter.Route, { path: 'alert', components: { cbody: Alert, curren2: "toast" } })
-				)
-			)
-		), document.querySelector('#router'));
+	        render: function render() {
+	            return React.createElement(
+	                'div',
+	                { className: 'index' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'index-top' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'index-title' },
+	                        React.createElement(
+	                            'span',
+	                            { className: 'warning' },
+	                            'RMB'
+	                        ),
+	                        'js'
+	                    ),
+	                    React.createElement(
+	                        'div',
+	                        null,
+	                        '一个针对移动端的前端框架'
+	                    ),
+	                    React.createElement(
+	                        'div',
+	                        { className: 'index-des' },
+	                        '前端TNT小组出品'
+	                    ),
+	                    React.createElement(
+	                        'div',
+	                        { className: 'index-github' },
+	                        React.createElement(
+	                            'a',
+	                            { href: 'https://github.com/TNT-F2E/RMBjs', target: '_blank' },
+	                            React.createElement(_antd.Icon, {
+	                                type: 'github' }),
+	                            ' Github'
+	                        )
+	                    ),
+	                    React.createElement(
+	                        'div',
+	                        null,
+	                        React.createElement(
+	                            'div',
+	                            { className: 'index-start' },
+	                            'Let\'s start!'
+	                        )
+	                    )
+	                ),
+	                React.createElement(
+	                    'div',
+	                    { className: 'index-list' },
+	                    React.createElement(
+	                        _antd.Row,
+	                        null,
+	                        React.createElement(
+	                            _antd.Col,
+	                            { span: '6' },
+	                            React.createElement(
+	                                'div',
+	                                { className: 'index-list-item' },
+	                                React.createElement(
+	                                    'div',
+	                                    { className: 'index-list-img' },
+	                                    React.createElement('img', { src: '../images/mbile.jpeg' })
+	                                ),
+	                                React.createElement(
+	                                    'div',
+	                                    { className: 'index-list-title' },
+	                                    '针对移动端'
+	                                ),
+	                                React.createElement(
+	                                    'div',
+	                                    { className: 'index-list-des' },
+	                                    '针对移动web的前端框架，代码更适宜于移动端，充分考虑移动端性能、兼容问题、hybird开发模式等'
+	                                )
+	                            )
+	                        ),
+	                        React.createElement(
+	                            _antd.Col,
+	                            { span: '6' },
+	                            React.createElement(
+	                                'div',
+	                                { className: 'index-list-item' },
+	                                React.createElement(
+	                                    'div',
+	                                    { className: 'index-list-img' },
+	                                    React.createElement('img', { src: '../images/components.png' })
+	                                ),
+	                                React.createElement(
+	                                    'div',
+	                                    { className: 'index-list-title' },
+	                                    '丰富的组件'
+	                                ),
+	                                React.createElement(
+	                                    'div',
+	                                    { className: 'index-list-des' },
+	                                    '丰富的移动ui组件,基于h5,css3,并根据css3能力做好js动画兼容,完美兼容各种移动机型'
+	                                )
+	                            )
+	                        ),
+	                        React.createElement(
+	                            _antd.Col,
+	                            { span: '6' },
+	                            React.createElement(
+	                                'div',
+	                                { className: 'index-list-item' },
+	                                React.createElement(
+	                                    'div',
+	                                    { className: 'index-list-img' },
+	                                    React.createElement('img', { src: '../images/performance1.png' })
+	                                ),
+	                                React.createElement(
+	                                    'div',
+	                                    { className: 'index-list-title' },
+	                                    '高性能 更智能'
+	                                ),
+	                                React.createElement(
+	                                    'div',
+	                                    { className: 'index-list-des' },
+	                                    '努力让体验接近原生效果,并从多方位提升页面性能,引入search管理页面功能,实现智能化（切换hybird和web模式等）'
+	                                )
+	                            )
+	                        ),
+	                        React.createElement(
+	                            _antd.Col,
+	                            { span: '6' },
+	                            React.createElement(
+	                                'div',
+	                                { className: 'index-list-item' },
+	                                React.createElement(
+	                                    'div',
+	                                    { className: 'index-list-img' },
+	                                    React.createElement('img', { src: '../images/react.png' })
+	                                ),
+	                                React.createElement(
+	                                    'div',
+	                                    { className: 'index-list-title' },
+	                                    '基于React'
+	                                ),
+	                                React.createElement(
+	                                    'div',
+	                                    { className: 'index-list-des' },
+	                                    '本框架基于React,且提供了基于webpack和gulp的脚手架工具,引入hotloader,htmlone等,使创建、开发、上线更简单'
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            );
+	        }
+	    });
+	    var Sider = React.createClass({
+	        displayName: 'Sider',
+	        getInitialState: function getInitialState() {
+	            return {
+	                defaultOpenKeys: []
+	            };
+	        },
+	        handleClick: function handleClick(e) {
+	            this.setState({
+	                current: e.key
+	            });
+	        },
+	        render: function render() {
+	            return React.createElement(
+	                'div',
+	                { className: 'main' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'banner' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'logo' },
+	                        React.createElement(
+	                            'span',
+	                            { className: 'warning' },
+	                            'RMB'
+	                        ),
+	                        'js'
+	                    ),
+	                    React.createElement(
+	                        'div',
+	                        { id: 'mainmenu' },
+	                        React.createElement(
+	                            _antd.Menu,
+	                            _defineProperty({ onClick: this.handleClick,
+	                                style: { width: 240 },
+	                                defaultOpenKeys: this.state.defaultOpenKeys,
+	                                selectedKeys: [this.state.current],
+	                                mode: 'horizontal'
+	                            }, 'style', { width: "", WebkitBoxFlex: 1, border: 0 }),
+	                            React.createElement(
+	                                _antd.Menu.Item,
+	                                { key: 'index' },
+	                                React.createElement(
+	                                    _reactRouter.Link,
+	                                    { to: '/index' },
+	                                    React.createElement(_antd.Icon, {
+	                                        type: 'home' }),
+	                                    React.createElement(
+	                                        'span',
+	                                        null,
+	                                        '首页'
+	                                    )
+	                                )
+	                            ),
+	                            React.createElement(
+	                                _antd.Menu.Item,
+	                                { key: 'build' },
+	                                React.createElement(
+	                                    _reactRouter.Link,
+	                                    { to: '/build' },
+	                                    React.createElement(_antd.Icon, {
+	                                        type: 'caret-circle-o-right' }),
+	                                    React.createElement(
+	                                        'span',
+	                                        null,
+	                                        '构建工具'
+	                                    )
+	                                )
+	                            ),
+	                            React.createElement(
+	                                _antd.Menu.Item,
+	                                { key: 'wapcomponents' },
+	                                React.createElement(
+	                                    _reactRouter.Link,
+	                                    { to: '/wapcomponents' },
+	                                    React.createElement(_antd.Icon, { type: 'appstore-o' }),
+	                                    React.createElement(
+	                                        'span',
+	                                        null,
+	                                        '移动web组件'
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                ),
+	                React.createElement(
+	                    'div',
+	                    { className: 'body' },
+	                    this.props.body
+	                ),
+	                React.createElement(
+	                    'div',
+	                    { className: 'footer' },
+	                    React.createElement(
+	                        'div',
+	                        null,
+	                        '我们是虚拟世界的建筑师'
+	                    ),
+	                    React.createElement(
+	                        'div',
+	                        { className: 'issues' },
+	                        '问题与建议:',
+	                        React.createElement(
+	                            'a',
+	                            { href: 'https://github.com/TNT-F2E/RMBjs/issues', target: '_blank' },
+	                            React.createElement(_antd.Icon, { type: 'github' }),
+	                            ' Issues'
+	                        )
+	                    ),
+	                    React.createElement(
+	                        'div',
+	                        { className: 'aboutus' },
+	                        '联系我们: ',
+	                        React.createElement(_antd.Icon, { type: 'mail' }),
+	                        ' 176929463@qq.com'
+	                    ),
+	                    React.createElement(
+	                        'div',
+	                        { className: 'andps' },
+	                        '最终解释权归本团队成员所有'
+	                    )
+	                )
+	            );
+	        }
+	    });
+	    var Treemenu = React.createClass({
+	        displayName: 'Treemenu',
+	        getInitialState: function getInitialState() {
+	            return {
+	                defaultOpenKeys: ["wapcomponents"]
+	            };
+	        },
+	        handleClick: function handleClick(e) {
+	            this.setState({
+	                current2: e.key
+	            });
+	        },
+	        render: function render() {
+	            return React.createElement(
+	                'div',
+	                { className: 'componentsBody' },
+	                React.createElement(
+	                    'div',
+	                    { id: 'menutree' },
+	                    React.createElement(
+	                        _antd.Menu,
+	                        { onClick: this.handleClick,
+	                            style: { width: 240 },
+	                            defaultOpenKeys: this.state.defaultOpenKeys,
+	                            selectedKeys: [this.state.current2],
+	                            mode: 'inline'
+	                        },
+	                        React.createElement(
+	                            _antd.Menu.Item,
+	                            { key: 'guide' },
+	                            React.createElement(
+	                                _reactRouter.Link,
+	                                { to: '/wapcomponents/guide' },
+	                                React.createElement(_antd.Icon, {
+	                                    type: 'question-circle-o' }),
+	                                React.createElement(
+	                                    'span',
+	                                    null,
+	                                    '快速上手'
+	                                )
+	                            )
+	                        ),
+	                        React.createElement(
+	                            SubMenu,
+	                            { title: '移动web-Components', key: 'wapcomponents' },
+	                            React.createElement(
+	                                _antd.Menu.Item,
+	                                { key: 'swiper' },
+	                                React.createElement(
+	                                    _reactRouter.Link,
+	                                    { to: '/wapcomponents/swiper' },
+	                                    'Swiper组件'
+	                                )
+	                            ),
+	                            React.createElement(
+	                                _antd.Menu.Item,
+	                                { key: 'toast' },
+	                                React.createElement(
+	                                    _reactRouter.Link,
+	                                    { to: '/wapcomponents/toast' },
+	                                    'Toast组件'
+	                                )
+	                            ),
+	                            React.createElement(
+	                                _antd.Menu.Item,
+	                                { key: 'alert' },
+	                                React.createElement(
+	                                    _reactRouter.Link,
+	                                    { to: '/wapcomponents/alert' },
+	                                    'Alert组件'
+	                                )
+	                            )
+	                        )
+	                    )
+	                ),
+	                React.createElement(
+	                    'div',
+	                    { className: 'componentsMain' },
+	                    this.props.cbody
+	                )
+	            );
+	        }
+	    });
+	    ReactDOM.render(React.createElement(
+	        _reactRouter.Router,
+	        { history: _reactRouter.hashHistory },
+	        React.createElement(_reactRouter.Redirect, { from: '/', to: '/index' }),
+	        React.createElement(_reactRouter.Redirect, { from: '/wapcomponents', to: '/wapcomponents/guide' }),
+	        React.createElement(
+	            _reactRouter.Route,
+	            { path: '/', component: Sider },
+	            React.createElement(_reactRouter.Route, { path: 'index', components: { current: "index", body: Index } }),
+	            React.createElement(_reactRouter.Route, { path: 'build', components: { current: "build", body: Build } }),
+	            React.createElement(_reactRouter.Route, { path: 'frame', components: { current: "frame", body: Frame } }),
+	            React.createElement(
+	                _reactRouter.Route,
+	                { path: 'wapcomponents', components: { body: Treemenu, current: "wapcomponents" } },
+	                React.createElement(_reactRouter.Route, { path: 'guide', components: { cbody: Guide, current2: "guide" } }),
+	                React.createElement(_reactRouter.Route, { path: 'swiper', components: { cbody: Swiper, curren2: "swiper" } }),
+	                React.createElement(_reactRouter.Route, { path: 'toast', components: { cbody: Toast, curren2: "toast" } }),
+	                React.createElement(_reactRouter.Route, { path: 'alert', components: { cbody: Alert, curren2: "toast" } })
+	            )
+	        )
+	    ), document.querySelector('#router'));
 	});
 
 /***/ },
@@ -32888,17 +32891,18 @@
 	        configurationData: React.PropTypes.array
 	    },
 
-	    componentDidMount: function componentDidMount() {
+	    highlightCode: function highlightCode() {
 	        $('pre code').each(function (i, block) {
 	            hljs.highlightBlock(block);
 	        });
 	    },
 
+	    componentDidMount: function componentDidMount() {
+	        this.highlightCode();
+	    },
 
 	    componentDidUpdate: function componentDidUpdate() {
-	        $('pre code').each(function (i, block) {
-	            hljs.highlightBlock(block);
-	        });
+	        this.highlightCode();
 	    },
 
 	    render: function render() {
@@ -32908,6 +32912,7 @@
 	        var sourceCode = _props.sourceCode;
 	        var configurationColumns = _props.configurationColumns;
 	        var configurationData = _props.configurationData;
+
 
 	        return React.createElement(
 	            'div',
@@ -32943,14 +32948,10 @@
 	                        )
 	                    )
 	                ),
-	                configurationColumns && configurationColumns.length && configurationData && configurationData.length ? React.createElement(
-	                    'div',
-	                    { className: 'configuration-table' },
-	                    React.createElement(Table, { columns: configurationColumns,
-	                        dataSource: configurationData,
-	                        pagination: false
-	                    })
-	                ) : null
+	                configurationColumns && configurationColumns.length && configurationData && configurationData.length ? React.createElement(Table, { columns: configurationColumns,
+	                    dataSource: configurationData,
+	                    pagination: false
+	                }) : React.createElement('div', null)
 	            ),
 	            React.createElement(
 	                'div',

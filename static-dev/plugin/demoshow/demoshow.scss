@@ -38,10 +38,6 @@
       border-radius: 5px;
       background: #f0f0f0;
     }
-
-    .configuration-table {
-      margin-top: 10px;
-    }
   }
 
   .right {
@@ -67,6 +63,7 @@
     border: 1px solid #e0e0e0;
     border-collapse: collapse;
     border-radius: 0;
+    margin-top: 15px;
 
     th, td {
       border: 1px solid #e0e0e0;

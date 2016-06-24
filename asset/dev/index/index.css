@@ -16115,10 +16115,6 @@ body {
   background: #f0f0f0;
 }
 
-.h5-component-display .left .configuration-table {
-  margin-top: 10px;
-}
-
 .h5-component-display .right {
   display: inline-block;
   box-sizing: border-box;
@@ -16138,6 +16134,7 @@ body {
   border: 1px solid #e0e0e0;
   border-collapse: collapse;
   border-radius: 0;
+  margin-top: 15px;
 }
 
 .h5-component-display table th, .h5-component-display table td {

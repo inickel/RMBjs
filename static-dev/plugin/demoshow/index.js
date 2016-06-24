@@ -19,20 +19,29 @@ var DemoShow = React.createClass({
         configurationData: React.PropTypes.array,
     },
 
-    componentDidMount(){
+    highlightCode: function () {
         $('pre code').each(function (i, block) {
             hljs.highlightBlock(block);
         });
+    },
+
+    componentDidMount: function () {
+        this.highlightCode();
     },
 
     componentDidUpdate: function () {
-        $('pre code').each(function (i, block) {
-            hljs.highlightBlock(block);
-        });
+        this.highlightCode();
     },
 
-    render(){
-        var {name, description, sourceCode, configurationColumns, configurationData}=this.props;
+    render: function () {
+        var {
+            name,
+            description,
+            sourceCode,
+            configurationColumns,
+            configurationData
+        }=this.props;
+
         return (
             <div className="h5-component-display">
                 <div className="left">
@@ -55,13 +64,11 @@ var DemoShow = React.createClass({
                     {
                         (configurationColumns && configurationColumns.length) && (configurationData && configurationData.length)
                             ?
-                            <div className="configuration-table">
-                                <Table columns={configurationColumns}
-                                       dataSource={configurationData}
-                                       pagination={false}
-                                />
-                            </div>
-                            : null
+                            <Table columns={configurationColumns}
+                                   dataSource={configurationData}
+                                   pagination={false}
+                            />
+                            : <div></div>
                     }
                 </div>
 
