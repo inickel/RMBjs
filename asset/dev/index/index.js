@@ -32407,7 +32407,7 @@
 	//<img data-src="../test.png"/>
 	/*
 	    Add lazy-loaded class
-	      @param [DOM]: Element to show
+	     @param [DOM]: Element to show
 	*/
 	addLoadedClass = function addLoadedClass(element) {
 	    if (element.classList) {

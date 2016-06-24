@@ -44,10 +44,11 @@
 
   .right {
     display: inline-block;
-    position: fixed;
-    top: 35px;
-    left: 800px;
+    //position: fixed;
+    //top: 35px;
+    //left: 800px;
     vertical-align: top;
+    margin-top: 50px;
     overflow-y: scroll;
     width: 320px;
     height: 600px;
