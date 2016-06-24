@@ -16097,6 +16097,7 @@ body {
 .h5-component-display .left .info .separator {
   height: 1px;
   background: #e0e0e0;
+  margin: 10px 0 5px 0;
 }
 
 .h5-component-display .left .info .description {
@@ -16109,6 +16110,7 @@ body {
 .h5-component-display .left .source-code-panel {
   min-height: 300px;
   max-height: 800px;
+  margin-top: 15px;
   overflow: scroll;
   border: 1px solid #d0d0d0;
   border-radius: 5px;
@@ -16134,7 +16136,7 @@ body {
   border: 1px solid #e0e0e0;
   border-collapse: collapse;
   border-radius: 0;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 
 .h5-component-display table th, .h5-component-display table td {
