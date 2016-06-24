@@ -92,7 +92,7 @@
 					{ className: 'index' },
 					_react2.default.createElement(
 						'div',
-						{ className: 'index-top', style: { "backgroundImage": "url(../images/index1.jpg)", "backgroundRepeat": 'no-repeat' } },
+						{ className: 'index-top' },
 						_react2.default.createElement(
 							'div',
 							{ className: 'index-title' },
@@ -32407,7 +32407,7 @@
 	//<img data-src="../test.png"/>
 	/*
 	    Add lazy-loaded class
-	     @param [DOM]: Element to show
+	      @param [DOM]: Element to show
 	*/
 	addLoadedClass = function addLoadedClass(element) {
 	    if (element.classList) {
