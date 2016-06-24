@@ -52,107 +52,287 @@
 
 	var sourceCode = '\n\'use strict\';\nimport { Spin } from \'antd\';\nconst Swiper =  React.createClass({\n\tgetInitialState: function() {\n\t\treturn {\n\t\t\tchildren: <Spin size="large"/>,\n\t\t\tcl : "loader"\n\t\t};\n\t},\n\tcomponentDidMount:function(){\n\t\tlet me = this;\n\t\tE.use("swiper",function(){\n\t\t\tme.setState({children:React.createElement(AsyncSwiper,me.props),cl:""})\n\t\t});\n\t},\n\trender : function(){\n\t\treturn <div className={this.state.cl}>{this.state.children}</div>\n\t}\n});\n\nmodule.exports = Swiper;\n';
 
+	var description = React.createElement(
+	    'div',
+	    null,
+	    React.createElement(
+	        'p',
+	        null,
+	        '这里是组件描述信息这里是组件描述信息这里是组件描述信息'
+	    ),
+	    React.createElement(
+	        'p',
+	        { className: 'emphasize' },
+	        '这是强调的内容强调的内容'
+	    ),
+	    React.createElement(
+	        'p',
+	        null,
+	        '这里是组件描述信息这里是组件描述信息这里是组件描述信息'
+	    )
+	);
+
+	var configurationColumns = [{
+	    title: '参数',
+	    dataIndex: 'name',
+	    key: 'name',
+	    width: '25%'
+	}, {
+	    title: '说明',
+	    dataIndex: 'desc',
+	    key: 'desc'
+	}, {
+	    title: '类型',
+	    dataIndex: 'type',
+	    key: 'type',
+	    width: '25%'
+	}];
+
+	var configurationData = [{
+	    key: '1',
+	    name: 'sourceCode',
+	    desc: '组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码',
+	    type: 'String',
+	    default: ''
+	}, {
+	    key: '2',
+	    name: 'configurationColumns',
+	    desc: '配置项表头',
+	    type: 'Array[Object]',
+	    default: ''
+	}, {
+	    key: '3',
+	    name: 'configurationData',
+	    desc: '配置项数据',
+	    type: 'Array[Object]',
+	    default: ''
+	}, {
+	    key: '4',
+	    name: 'description',
+	    desc: '组件描述',
+	    type: 'String',
+	    default: ''
+	}];
+
 	window.AsyncSwiper = React.createClass({
-	  displayName: 'AsyncSwiper',
+	    displayName: 'AsyncSwiper',
 
 
-	  render: function render() {
-	    return React.createElement(
-	      DemoShow,
-	      { name: 'swiper',
-	        description: React.createElement(
-	          'div',
-	          null,
-	          '这里是组件描述信息'
-	        ),
-	        sourceCode: sourceCode },
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '这里是内容'
-	      )
-	    );
-	  }
+	    render: function render() {
+	        return React.createElement(
+	            DemoShow,
+	            { name: 'swiper',
+	                description: description,
+	                sourceCode: sourceCode,
+	                configurationColumns: configurationColumns,
+	                configurationData: configurationData },
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '这里是内容'
+	            )
+	        );
+	    }
 	});
 
 /***/ },
@@ -4762,6 +4942,11 @@
 	        configurationData: _react2.default.PropTypes.array
 	    },
 
+	    componentDidMount: function componentDidMount() {
+	        $('pre code').each(function (i, block) {
+	            hljs.highlightBlock(block);
+	        });
+	    },
 	    render: function render() {
 	        var _props = this.props;
 	        var name = _props.name;
@@ -4859,7 +5044,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/* 色系 */\n/* 几行文字 */\n.h5-component-display {\n  padding-bottom: 50px;\n}\n\n.h5-component-display .left {\n  display: inline-block;\n  width: 600px;\n  padding: 5px;\n  margin-right: 20px;\n}\n\n.h5-component-display .left .info {\n  padding: 10px 0;\n}\n\n.h5-component-display .left .info .title {\n  font-size: 2em;\n  color: #222;\n}\n\n.h5-component-display .left .info .separator {\n  height: 1px;\n  background: #e0e0e0;\n}\n\n.h5-component-display .left .info .description {\n  padding-top: 10px;\n  font-size: 1.1em;\n  color: #666;\n  font-weight: 300;\n}\n\n.h5-component-display .left .source-code-panel {\n  min-height: 600px;\n  max-height: 800px;\n  overflow: scroll;\n  border: 1px solid #d0d0d0;\n  border-radius: 5px;\n  background: #f0f0f0;\n}\n\n.h5-component-display .left .configuration-table {\n  margin-top: 10px;\n}\n\n.h5-component-display .right {\n  display: inline-block;\n  vertical-align: top;\n  margin-top: 50px;\n  overflow-y: scroll;\n  width: 320px;\n  height: 600px;\n  border: 8px solid rgba(0, 0, 0, 0.8);\n  border-top-width: 25px;\n  border-bottom-width: 40px;\n  border-radius: 10px;\n  background-color: #fff;\n}\n\n.h5-component-display table {\n  border: 1px solid #e0e0e0;\n  border-collapse: collapse;\n  border-radius: 0;\n}\n\n.h5-component-display table th, .h5-component-display table td {\n  border: 1px solid #e0e0e0;\n}\n\n.h5-component-display .ant-table {\n  border-radius: 0;\n}\n\n.h5-component-display .emphasize {\n  color: #be1e00;\n  font-weight: bold;\n}\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/* 色系 */\n/* 几行文字 */\n.h5-component-display {\n  padding-bottom: 50px;\n}\n\n.h5-component-display .left {\n  display: inline-block;\n  width: 62%;\n  padding: 5px;\n  margin-right: 20px;\n  box-sizing: border-box;\n}\n\n.h5-component-display .left .info {\n  padding-bottom: 10px;\n}\n\n.h5-component-display .left .info .title {\n  font-size: 2em;\n  color: #222;\n}\n\n.h5-component-display .left .info .separator {\n  height: 1px;\n  background: #e0e0e0;\n}\n\n.h5-component-display .left .info .description {\n  padding-top: 10px;\n  font-size: 1.1em;\n  color: #666;\n  font-weight: 300;\n}\n\n.h5-component-display .left .source-code-panel {\n  min-height: 300px;\n  max-height: 800px;\n  overflow: scroll;\n  border: 1px solid #d0d0d0;\n  border-radius: 5px;\n  background: #f0f0f0;\n}\n\n.h5-component-display .left .configuration-table {\n  margin-top: 10px;\n}\n\n.h5-component-display .right {\n  display: inline-block;\n  box-sizing: border-box;\n  vertical-align: top;\n  margin-top: 50px;\n  overflow-y: scroll;\n  width: 33%;\n  height: 550px;\n  border: 8px solid rgba(0, 0, 0, 0.8);\n  border-top-width: 25px;\n  border-bottom-width: 40px;\n  border-radius: 10px;\n  background-color: #fff;\n}\n\n.h5-component-display table {\n  border: 1px solid #e0e0e0;\n  border-collapse: collapse;\n  border-radius: 0;\n}\n\n.h5-component-display table th, .h5-component-display table td {\n  border: 1px solid #e0e0e0;\n}\n\n.h5-component-display .ant-table {\n  border-radius: 0;\n}\n\n.h5-component-display .emphasize {\n  color: #be1e00;\n  font-weight: bold;\n}\n", ""]);
 
 	// exports
 

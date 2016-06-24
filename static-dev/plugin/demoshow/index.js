@@ -20,6 +20,12 @@ var DemoShow = React.createClass({
         configurationData: React.PropTypes.array,
     },
 
+    componentDidMount(){
+        $('pre code').each(function (i, block) {
+            hljs.highlightBlock(block);
+        });
+    },
+
     render(){
         var {name, description, sourceCode, configurationColumns, configurationData}=this.props;
         return (
@@ -34,11 +40,11 @@ var DemoShow = React.createClass({
                     </div>
 
                     <div className="source-code-panel">
-            <pre>
-              <code>
-                <div dangerouslySetInnerHTML={{__html:sourceCode}}/>
-              </code>
-            </pre>
+                        <pre>
+                          <code>
+                            <div dangerouslySetInnerHTML={{__html:sourceCode}}/>
+                          </code>
+                        </pre>
                     </div>
 
                     {
