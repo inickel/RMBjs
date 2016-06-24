@@ -26,6 +26,12 @@ var DemoShow = React.createClass({
         });
     },
 
+    componentDidUpdate: function () {
+        $('pre code').each(function (i, block) {
+            hljs.highlightBlock(block);
+        });
+    },
+
     render(){
         var {name, description, sourceCode, configurationColumns, configurationData}=this.props;
         return (
@@ -42,7 +48,7 @@ var DemoShow = React.createClass({
                     <div className="source-code-panel">
                         <pre>
                           <code>
-                            <div dangerouslySetInnerHTML={{__html:sourceCode}}/>
+                            <div className="highlight-code" dangerouslySetInnerHTML={{__html:sourceCode}}/>
                           </code>
                         </pre>
                     </div>

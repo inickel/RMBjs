@@ -50,7 +50,7 @@
 
 	var DemoShow = __webpack_require__(78);
 
-	var sourceCode = '\n\'use strict\';\nimport { Spin } from \'antd\';\nconst Swiper =  React.createClass({\n\tgetInitialState: function() {\n\t\treturn {\n\t\t\tchildren: <Spin size="large"/>,\n\t\t\tcl : "loader"\n\t\t};\n\t},\n\tcomponentDidMount:function(){\n\t\tlet me = this;\n\t\tE.use("swiper",function(){\n\t\t\tme.setState({children:React.createElement(AsyncSwiper,me.props),cl:""})\n\t\t});\n\t},\n\trender : function(){\n\t\treturn <div className={this.state.cl}>{this.state.children}</div>\n\t}\n});\n\nmodule.exports = Swiper;\n';
+	var sourceCode = '\n\'use strict\';\nimport { Spin } from \'antd\';\nconst Swiper =  React.createClass({\n\tgetInitialState: function() {\n\t\treturn {\n\t\t\tchildren: <Spin size="large"/>,\n\t\t\tcl : "loader"\n\t\t};\n\t},\n\tcomponentDidMount:function(){\n\t\tlet me = this;\n\t\tE.use("swiper",function(){\n\t\t\tme.setState({children:React.createElement(AsyncSwiper,me.props),cl:""})\n\t\t});\n\t},\n\trender : function(){\n\t\treturn (<div>\n\t\t        {this.state.children}\n\t\t    </div>)\n\t    }\n});\n\nmodule.exports = Swiper;\n';
 
 	var description = React.createElement(
 	    'div',
@@ -4947,6 +4947,14 @@
 	            hljs.highlightBlock(block);
 	        });
 	    },
+
+
+	    componentDidUpdate: function componentDidUpdate() {
+	        $('pre code').each(function (i, block) {
+	            hljs.highlightBlock(block);
+	        });
+	    },
+
 	    render: function render() {
 	        var _props = this.props;
 	        var name = _props.name;
@@ -4985,7 +4993,7 @@
 	                        _react2.default.createElement(
 	                            'code',
 	                            null,
-	                            _react2.default.createElement('div', { dangerouslySetInnerHTML: { __html: sourceCode } })
+	                            _react2.default.createElement('div', { className: 'highlight-code', dangerouslySetInnerHTML: { __html: sourceCode } })
 	                        )
 	                    )
 	                ),

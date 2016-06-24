@@ -20,8 +20,10 @@ const Swiper =  React.createClass({
 		});
 	},
 	render : function(){
-		return <div className={this.state.cl}>{this.state.children}</div>
-	}
+		return (<div>
+		        {this.state.children}
+		    </div>)
+	    }
 });
 
 module.exports = Swiper;

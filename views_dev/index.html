@@ -15,5 +15,13 @@
 <script type="text/javascript" src="../asset/dev/base/vendor1.1.min.js" keeplive></script>
 <script type="text/javascript" src="../asset/dev/index/index.js"></script>
 
+<script>
+    $(function () {
+        $('pre code').each(function (i, block) {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
+
 </body>
 </html>
