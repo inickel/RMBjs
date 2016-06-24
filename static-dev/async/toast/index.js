@@ -1,5 +1,5 @@
 'use strict';
-import { Spin } from 'antd';
+var Spin=ANT.Spin;
 const Toast =  React.createClass({
 	getInitialState: function() {
 		return {
@@ -8,9 +8,10 @@ const Toast =  React.createClass({
 		};
 	},
 	componentDidMount:function(){
+		console.log(1);
 		let me = this;
 		E.use("toast",function(){
-			me.setState({children:React.createElement(AsyncToast,me.props),cl:""})
+			me.setState({children:React.createElement(AsyncToast,me.props?me.props:{}),cl:""})
 		});
 	},
 	render : function(){

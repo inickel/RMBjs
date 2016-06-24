@@ -49,17 +49,293 @@
 
 	__webpack_require__(76);
 
+	var sourceCode = '\n\'use strict\';\nimport { Spin } from \'antd\';\nconst Swiper =  React.createClass({\n\tgetInitialState: function() {\n\t\treturn {\n\t\t\tchildren: <Spin size="large"/>,\n\t\t\tcl : "loader"\n\t\t};\n\t},\n\tcomponentDidMount:function(){\n\t\tlet me = this;\n\t\tE.use("swiper",function(){\n\t\t\tme.setState({children:React.createElement(AsyncSwiper,me.props),cl:""})\n\t\t});\n\t},\n\trender : function(){\n\t\treturn (<div>\n\t\t        {this.state.children}\n\t\t    </div>)\n\t    }\n});\n\nmodule.exports = Swiper;\n';
+
+	var description = React.createElement(
+	    'div',
+	    null,
+	    React.createElement(
+	        'p',
+	        null,
+	        '这里是组件描述信息这里是组件描述信息这里是组件描述信息'
+	    ),
+	    React.createElement(
+	        'p',
+	        { className: 'emphasize' },
+	        '这是强调的内容强调的内容'
+	    ),
+	    React.createElement(
+	        'p',
+	        null,
+	        '这里是组件描述信息这里是组件描述信息这里是组件描述信息'
+	    )
+	);
+
+	var configurationColumns = [{
+	    title: '参数',
+	    dataIndex: 'name',
+	    key: 'name',
+	    width: '25%'
+	}, {
+	    title: '说明',
+	    dataIndex: 'desc',
+	    key: 'desc'
+	}, {
+	    title: '类型',
+	    dataIndex: 'type',
+	    key: 'type',
+	    width: '25%'
+	}];
+
+	var configurationData = [{
+	    key: '1',
+	    name: 'sourceCode',
+	    desc: '组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码组件源代码',
+	    type: 'String',
+	    default: ''
+	}, {
+	    key: '2',
+	    name: 'configurationColumns',
+	    desc: '配置项表头',
+	    type: 'Array[Object]',
+	    default: ''
+	}, {
+	    key: '3',
+	    name: 'configurationData',
+	    desc: '配置项数据',
+	    type: 'Array[Object]',
+	    default: ''
+	}, {
+	    key: '4',
+	    name: 'description',
+	    desc: '组件描述',
+	    type: 'String',
+	    default: ''
+	}];
+
 	window.AsyncSwiper = React.createClass({
-		displayName: 'AsyncSwiper',
+	    displayName: 'AsyncSwiper',
 
 
-		render: function render() {
-			return React.createElement(
-				'div',
-				null,
-				'swiper'
-			);
-		}
+	    render: function render() {
+	        return React.createElement(
+	            DemoShow,
+	            { name: 'swiper',
+	                description: description,
+	                sourceCode: sourceCode,
+	                configurationColumns: configurationColumns,
+	                configurationData: configurationData },
+	            React.createElement(
+	                'div',
+	                null,
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                ),
+	                React.createElement(
+	                    'p',
+	                    null,
+	                    '这里是内容'
+	                )
+	            )
+	        );
+	    }
 	});
 
 /***/ },

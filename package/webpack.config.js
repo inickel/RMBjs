@@ -32,8 +32,8 @@ module.exports = {
             loader: cssExtract.extract('css')
         }, {
             test: /\.scss$/,
-            // loader: cssExtract.extract('css!compass?outputStyle=expanded')
-            loader: cssExtract.extract('css!sass?outputStyle=expanded')
+            // loader: cssExtract.extract('css!sass?outputStyle=expanded'),
+            loader: cssExtract.extract('raw!sass?outputStyle=expanded'),
 		}, {
             test: /\.jsx?$/i,
             loader: 'babel',
