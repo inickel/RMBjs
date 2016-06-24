@@ -1,7 +1,6 @@
 'use strict';
 require('./swiper.scss');
 
-var DemoShow = require('../../plugin/demoshow');
 
 const sourceCode = `
 'use strict';

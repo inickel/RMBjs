@@ -16070,3 +16070,85 @@ body {
   padding-top: 100px;
   text-align: center;
 }
+@charset "UTF-8";
+/* 色系 */
+/* 几行文字 */
+.h5-component-display {
+  padding-bottom: 50px;
+}
+
+.h5-component-display .left {
+  display: inline-block;
+  width: 62%;
+  padding: 5px;
+  margin-right: 20px;
+  box-sizing: border-box;
+}
+
+.h5-component-display .left .info {
+  padding-bottom: 10px;
+}
+
+.h5-component-display .left .info .title {
+  font-size: 2em;
+  color: #222;
+}
+
+.h5-component-display .left .info .separator {
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.h5-component-display .left .info .description {
+  padding-top: 10px;
+  font-size: 1.1em;
+  color: #666;
+  font-weight: 300;
+}
+
+.h5-component-display .left .source-code-panel {
+  min-height: 300px;
+  max-height: 800px;
+  overflow: scroll;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  background: #f0f0f0;
+}
+
+.h5-component-display .left .configuration-table {
+  margin-top: 10px;
+}
+
+.h5-component-display .right {
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+  margin-top: 50px;
+  overflow-y: scroll;
+  width: 33%;
+  height: 550px;
+  border: 8px solid rgba(0, 0, 0, 0.8);
+  border-top-width: 25px;
+  border-bottom-width: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.h5-component-display table {
+  border: 1px solid #e0e0e0;
+  border-collapse: collapse;
+  border-radius: 0;
+}
+
+.h5-component-display table th, .h5-component-display table td {
+  border: 1px solid #e0e0e0;
+}
+
+.h5-component-display .ant-table {
+  border-radius: 0;
+}
+
+.h5-component-display .emphasize {
+  color: #be1e00;
+  font-weight: bold;
+}

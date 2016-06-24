@@ -1,7 +1,6 @@
-import React from 'react'
 import './demoshow.scss'
-import {Table, Icon} from 'antd';
-
+var Table = ANT.Table;
+var Icon = ANT.Icon;
 /**
  * 组件展示页面
  * props:

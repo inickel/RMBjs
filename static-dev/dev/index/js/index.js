@@ -2,10 +2,13 @@
 require('../css/index.scss');
 //const Components = require('async/components');
 import 'antd/dist/antd.css';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Menu ,Icon,Button,Row,Col} from "antd";
+window.React =require('react') ;
+window.ReactDOM=require('react-dom');
+import { Menu ,Icon,Button,Row,Col,Table,Spin} from "antd";
 import { Router, Route, Link,Redirect,hashHistory } from 'react-router'
+window.ANT = {
+	Menu,Icon,Button,Row,Col,Spin
+};
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 var Img = require('plugin/img');
@@ -15,10 +18,9 @@ var Guide = require('async/guide');
 var Swiper = require('async/swiper');
 var Toast = require('async/toast');
 var Alert = require('async/alert');
+window.DemoShow = require('plugin/demoshow');
 
-window.ANT = {
-	Menu
-};
+
 
 $(function(){
 	E.closeLoading();
